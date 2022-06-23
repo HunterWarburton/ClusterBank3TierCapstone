@@ -7,7 +7,7 @@ function Card(props) {
     <div className="card" style={{maxWidth: "18rem"}}>
       <h5 className={cardHeaderClass}>{props.headerText}</h5>
       <br/>
-      <img src="./_img/cluster.png" style={{padding: "20px"}} className="img-fluid left" alt="Responsive image" width="50%"/><br/>
+      <img src="./_img/cluster.png" type="image/png" style={{padding: "20px"}} className="img-fluid left" alt="Responsive image" width="50%"/><br/>
       <div className="card-body">
         {props.body}
       </div>
