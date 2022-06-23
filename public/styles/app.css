@@ -72,3 +72,9 @@ canvas {
   left: 0;
   z-index: -9999;
 }
+
+.card-body {
+  height: 50%;
+    max-height: 30em !important;
+    overflow-y: auto;
+}
