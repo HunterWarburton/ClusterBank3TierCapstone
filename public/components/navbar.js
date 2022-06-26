@@ -3,7 +3,7 @@ function Navbar() {
     <>
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <a className="navbar-brand" href="./index.html">
-        <img src="./_img/cluster.png" width="30" height="30" />
+        <img src="./_img/cluster.png" type="image/png" width="30" height="30" />
         Cluster Bank
       </a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

@@ -58,9 +58,13 @@ a:active { text-decoration: none; }
 }
 
 body{
-  background-color: linear-gradient(90deg, rgba(155,0,0,1) 0%, rgba(0,0,155,1) 100%);
   margin: 0;
   overflow: hidden;
+  background-color: transparent !important;
+}
+
+.navbar {
+  background-color: #000 !important;
 }
 
 canvas {
@@ -71,10 +75,24 @@ canvas {
   top: 0;
   left: 0;
   z-index: -9999;
+  
 }
 
 .card-body {
   height: 50%;
     max-height: 30em !important;
     overflow-y: auto;
+}
+
+
+html {
+  width: 100%;
+  height: 100%;
+  
+  background: #11e8bb; /* Old browsers */
+  background: -moz-linear-gradient(top,  #11e8bb 0%, #8200c9 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #11e8bb 0%,#8200c9 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #11e8bb 0%,#8200c9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#11e8bb', endColorstr='#8200c9',GradientType=0 ); /* IE6-9 */
+
 }

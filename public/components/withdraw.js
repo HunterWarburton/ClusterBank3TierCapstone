@@ -3,13 +3,14 @@ function Withdraw() {
   const context = React.useContext(UserContext);
   
   const formElements = ['amount', 'button'];
-  const bgcolor = 'warning';
-  const txtcolor = 'black'
+  const bgcolor = 'danger';
+  const txtcolor = 'black';
   const initialButtonMessage = 'Withdraw'
   const successMessage = `Your Balance is: $${showForm.balance}.`
   const successButtonText = 'Make another Withdrawal'
 
   return (
+    <>
     <Card
       bgcolor={bgcolor}
       txtcolor={txtcolor}
@@ -18,7 +19,7 @@ function Withdraw() {
         context.currentUser !== null ? (
         showForm.form ? 
           <Form 
-            pageName="Withdraw"
+            pageName="Withdraw"//{form.gBalance}
             setShowForm={setShowForm}
             formElements={formElements}
             bgcolor={bgcolor} 
@@ -41,6 +42,9 @@ function Withdraw() {
 				  Don't have an account? <a href="#/createaccount/" className="btnDeposit" data-toggle="tooltip" title="Create new Account"> Create a new account here...</a>. 
         </div>
       }
-    />  
+    />
+
+    </>
+      
   );
 }

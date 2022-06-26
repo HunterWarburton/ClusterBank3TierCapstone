@@ -24,8 +24,8 @@ function AllData() {
 
   return(
     <Card
-      bgcolor="info"
-      txtcolor="black"
+      bgcolor="dark"
+      txtcolor="white"
       headerText="All Data"
       body={data}
     />

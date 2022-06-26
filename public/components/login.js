@@ -2,7 +2,7 @@ function Login(props) {
   const context = React.useContext(UserContext);
   
   const formElements = ['email', 'password', 'button'];
-  const bgcolor = 'danger';
+  const bgcolor = 'info';
   const txtcolor = 'white'
   const initialButtonMessage = 'Log In'
   const successMessage = 'Log In Successful!'

@@ -15,7 +15,7 @@ function Balance() {
 
   return (
     <Card
-      bgcolor="light"
+      bgcolor="warning"
       txtcolor="black"
       headerText="Balance"
       status=""
@@ -26,7 +26,7 @@ function Balance() {
         </div>
         :
         <div>
-          You must Log In with an email and password
+          You must <a href='#/login/' className="btnDeposit" data-toggle="tooltip" title="Login to your Account">Login</a> with an email and password
         </div>
       }
     />

@@ -3,7 +3,7 @@ function Deposit() {
   const context = React.useContext(UserContext);
 
   const formElements = ['amount', 'button'];
-  const bgcolor = 'light'
+  const bgcolor = 'success'
   const txtcolor = 'dark'
   const initialButtonMessage = 'Deposit'
   const successMessage = `Your available balance is: $${showForm.balance}.`
