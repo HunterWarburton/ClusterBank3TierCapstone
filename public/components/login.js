@@ -1,6 +1,6 @@
 function Login(props) {
   const context = React.useContext(UserContext);
-  
+
   const formElements = ['email', 'password', 'button'];
   const bgcolor = 'info';
   const txtcolor = 'white'
@@ -8,29 +8,42 @@ function Login(props) {
   const successMessage = 'Log In Successful!'
   const successButtonText = 'Sign Out'
 
+  
+
+
   return (
+    <>
+
+<div id="my-signin2"></div>
+
     <Card
       bgcolor={bgcolor}
       txtcolor={txtcolor}
       headerText="Log In"
       body={
         context.currentUser === null ? 
-        <Form 
-          pageName="Login"
-          formElements={formElements}
-          bgcolor={bgcolor} 
-          txtcolor={txtcolor}
-          initialButtonMessage={initialButtonMessage}
-        /> : 
-        <FormMessage
-          pageName="Login"
-          bgcolor={bgcolor}
-          txtcolor={txtcolor}
-          successMessage={successMessage}
-          successButtonText={successButtonText}
-        />
+          <>
+          <Form 
+            pageName="Login"
+            formElements={formElements}
+            bgcolor={bgcolor} 
+            txtcolor={txtcolor}
+            initialButtonMessage={initialButtonMessage}
+          />
+          
+          </>
+          : 
+          <FormMessage
+            pageName="Login"
+            bgcolor={bgcolor}
+            txtcolor={txtcolor}
+            successMessage={successMessage}
+            successButtonText={successButtonText}
+          />
       }
     />
+    
+    </>
   );
 
 }
