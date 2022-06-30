@@ -5,7 +5,7 @@ function Home() {
       txtcolor="dark"
       headerText="Welcome to Cluster Bank: Full-Stack 3 Tier"
       body={<>
-      To Begin, press the button <a href="#Login" class="btnDeposit">Log In</a>.    
+      To Begin, press the button <a href="#Login" className="btnDeposit">Log In</a>.    
       </>}
     />
   );
