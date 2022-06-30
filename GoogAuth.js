@@ -8,7 +8,7 @@ const GOOGLE_CLIENT_SECRET = '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';
 passport.use(new GoogleStrategy({
     clientID:     GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/google/callback",
+    callbackURL: "https://huntwar-bank3tier.herokuapp.com/google/callback",
     passReqToCallback   : true
   },
   function(request, accessToken, refreshToken, profile, done) {
