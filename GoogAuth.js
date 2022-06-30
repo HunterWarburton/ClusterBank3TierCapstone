@@ -3,12 +3,12 @@ require('dotenv').config();
 
 var GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
 
-const GOOGLE_CLIENT_ID = process.env.GOOG_CLIENT_ID;
-const GOOGLE_CLIENT_SECRET = process.env.GOOG_CLIENT_SECRET;
+const GOOGLE_CLIENT_ID = "595295551043-45qsecbu7sjak6l9jg2efm3junopj33k.apps.googleusercontent.com;
+const GOOGLE_CLIENT_SECRET = "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";
 
 passport.use(new GoogleStrategy({
-    clientID:     process.env.GOOG_CLIENT_ID,
-    clientSecret: process.env.GOOG_CLIENT_SECRET,
+    clientID:     GOOGLE_CLIENT_ID,
+    clientSecret: GOOGLE_CLIENT_SECRET,
     callbackURL: "https://huntwar-bank3tier.herokuapp.com/google/callback",
     passReqToCallback   : true
   },
