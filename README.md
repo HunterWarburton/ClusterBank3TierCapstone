@@ -7,9 +7,6 @@ This is the Session 3 final / capstone project for the "MIT xPRO Professional Ce
 In order to run this program, follow these steps:
 
 1. Clone the repository
-```
-git clone https://github.com/*****INSERT URL HERE
-```
 
 2. Node.js, Docker, and MongoDB must be installed on your computer.
    1. [Node.js](https://nodejs.org/en/)
@@ -35,9 +32,6 @@ nodemon index.js
 
 6. Open your web browser and go to the URL: http://localhost:3000
 
-## Screen Capture
-****INSERT PICTURE HERE
-<img src="./img/SCREENSHOT.png" width="300">
 
 ## Technology used:
 * HTML  
