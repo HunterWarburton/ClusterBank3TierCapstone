@@ -16,5 +16,4 @@ jobs:
         envkey_SOME_API_KEY: "123456abcdef"
         envkey_GOOG_CLIENT_ID: ${{ secrets.GOOG_CLIENT_ID }}
         envkey_GOOG_CLIENT_SECRET: ${{ secrets.GOOG_CLIENT_SECRET }}
-        directory: ClusterBank3TierCapstone/
         file_name: .env
