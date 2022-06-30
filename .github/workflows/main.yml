@@ -1,15 +1,27 @@
-name: Deploy
-
-on:
-  push:
-    branches:
-      - master
+name: env_tutorial
+## Triggers the workflow on when there is a push, or 
+## pull request on the main branch
+on: [pull_request, push] 
 
 jobs:
-  build:
+  job1:
+    ## The type of runner that the job will run on
+    runs-on: ubuntu-latest 
+    steps:
+      - name: step 1
+        ## Reference your environment variables
+        run: echo "The GOOG_CLIENT_ID key is:${{secrets.GOOG_CLIENT_ID}}"
+    env: #an environment variable
+      GOOG_CLIENT_ID: ${{ secrets.GOOG_CLIENT_ID}}
+      GOOG_CLIENT_SECRET: ${{ secrets.GOOG_CLIENT_SECRET}}
+
+
+  job2:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: step 1
+        ## Reference your environment variables
+        run: echo "The API key is:${{secrets.GOOG_CLIENT_ID}}"  
     env: #an environment variable
       GOOG_CLIENT_ID: ${{ secrets.GOOG_CLIENT_ID}}
       GOOG_CLIENT_SECRET: ${{ secrets.GOOG_CLIENT_SECRET}}
