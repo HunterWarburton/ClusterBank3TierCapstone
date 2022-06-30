@@ -29,7 +29,7 @@ let db = null;
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 client.connect(err => {
-    console.log("Connected successfully to mongo's db server");
+    console.log("DAL Connected successfully to mongo's db server");
     //🗄️ database
     db = client.db("Bank3TierMongoDatabase");
     console.log("db = " + db.namespace);
@@ -41,6 +41,7 @@ client.connect(err => {
 
 
 const create = (name, email, password) => {
+  console.log('dal.js --> create');
   return new Promise((resolve, reject) => {
     const user = {name, email, password, balance: 0};
     users.insertOne(user, {w:1}, (err, result) => {
@@ -52,6 +53,7 @@ const create = (name, email, password) => {
 }
 
 const login = (email) => {
+  console.log('dal.js --> login');
   return new Promise((resolve, reject) => {
     users.findOne({email}, (err, result) => {
       console.log('dal.js --> login result: ', result)
@@ -61,9 +63,10 @@ const login = (email) => {
 }
 
 const findUser = (id) => {
+  console.log('dal.js --> findUser');
   return new Promise((resolve, reject) => {
     users.findOne({_id: ObjectId(id)}, (err, result) => {
-      console.log('dal.js --> login result: ', result)
+      console.log('dal.js --> findUser login result: ', result)
       err ? reject(err) : resolve(result);
     });
   });
@@ -86,15 +89,8 @@ const allData = () => {
   })
 }
 
-/*
-const onSignIn = (googleUser) => {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-}
-*/
+
+
 
 
 module.exports = {create, login, findUser, updateBalance, allData};

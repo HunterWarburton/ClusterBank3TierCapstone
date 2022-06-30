@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-signin-client_id" content="595295551043-45qsecbu7sjak6l9jg2efm3junopj33k.apps.googleusercontent.com">
-  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-  
+
+
   <title>Bank3Tier-Cluster with MongoDB</title>
   <link rel="shortcut icon" defer type="image/jpg" href="_img/Cluster.ico"/>
 
@@ -31,52 +31,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js" crossorigin></script>
   <script src="_img/Cluster.js" defer type="text/javascript"></script>
 
-<!--//Google Signin Button -->
-  <div id="my-signin2" data-onsuccess="onSignIn"></div>
-  <script>
-        function onSuccess(googleUser) {
-      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-    }
-    function onFailure(error) {
-      console.log(error);
-    }
-    
-    function renderButton() {
-      gapi.signin2.render('my-signin2', {
-        'scope': 'profile email',
-        'width': 240,
-        'height': 50,
-        'longtitle': true,
-        'theme': 'dark',
-        'onsuccess': onSuccess,
-        'onfailure': onFailure
-      });
-    }
-  </script>
-  <script>
-    function onSignIn(googleUser) {
-         var profile = googleUser.getBasicProfile();
-         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-         console.log('Name: ' + profile.getName());
-         console.log('Image URL: ' + profile.getImageUrl());
-         console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-        //
-         var id_token = googleUser.getAuthResponse().id_token;
-        // console.log(id_token);
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', '/login');
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.onload = function() {
-            console.log('Signed in as: ' + xhr.responseText);
-            if(xhr.responseText == 'success'){
-                signOut();
-                location.assign('/profile')
-            }
-        };
-        xhr.send(JSON.stringify({token : id_token}));
-      }
-    </script>
-  
+
 
   <!-- React 17.0.2 and React Router 6.0.2-->
   <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
@@ -99,7 +54,7 @@
   <script src="components/login.js" defer type="text/babel"></script>
   <script src="components/navbar.js" defer type="text/babel"></script>
   <script src="components/withdraw.js" defer type="text/babel"></script>
-  
+
   <script src="index.js" defer type="text/babel"></script>
 
 </body>
