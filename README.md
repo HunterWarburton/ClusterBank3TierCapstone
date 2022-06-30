@@ -15,7 +15,7 @@ git clone https://github.com/*****INSERT URL HERE
    1. [Node.js](https://nodejs.org/en/)
    2. [Docker](https://docs.docker.com/get-docker/)
    3. [MongoDB](https://docs.mongodb.com/manual/administration/install-community/)
-      1. [Robo 3T](https://robomongo.org/): GUI to interact with MongoDB database.
+   4. [Robo 3T](https://robomongo.org/): GUI to interact with MongoDB database.
 
 3. Once the project is in your computer, install the dependencies:
 
