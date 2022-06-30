@@ -7,8 +7,8 @@ const GOOGLE_CLIENT_ID = process.env.GOOG_CLIENT_ID;
 const GOOGLE_CLIENT_SECRET = process.env.GOOG_CLIENT_SECRET;
 
 passport.use(new GoogleStrategy({
-    clientID:     GOOGLE_CLIENT_ID,
-    clientSecret: GOOGLE_CLIENT_SECRET,
+    clientID:     process.env.GOOG_CLIENT_ID,
+    clientSecret: process.env.GOOG_CLIENT_SECRET,
     callbackURL: "https://huntwar-bank3tier.herokuapp.com/google/callback",
     passReqToCallback   : true
   },
