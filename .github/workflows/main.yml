@@ -1,15 +1,19 @@
-name: env_tutorial
-## Triggers the workflow on when there is a push, or 
-## pull request on the main branch
-on: [pull_request, push] 
+name: Create envfile
+
+on: [pull_request, push]
 
 jobs:
-  job1:
-    ## The type of runner that the job will run on
-    runs-on: ubuntu-latest 
+
+  create-envfile:
+ 
+    runs-on: ubuntu-latest
+ 
     steps:
-    - name: Create env file
-        run:
-          touch .env
-          echo GOOG_CLIENT_ID=${{ secrets.GOOG_CLIENT_ID }} >> .env
-          cat .env
+    - name: Make envfile
+      uses: SpicyPizza/create-envfile@v1
+      with:
+        envkey_DEBUG: false
+        envkey_SOME_API_KEY: "123456abcdef"
+        envkey_GOOG_CLIENT_ID: ${{ secrets.GOOG_CLIENT_ID }}
+        envkey_GOOG_CLIENT_SECRET: ${{ secrets.GOOG_CLIENT_SECRET }}
+        file_name: .env
